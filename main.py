@@ -75,4 +75,48 @@ print(square_roots_1_to_10)
 
 
 
+#TASK5
+
+import math
+
+
+class SquareGenerator:
+    def generate_squares(self, start, end):
+
+        if end < start:
+            raise ValueError("End of the range must be greater than or equal to the start.")
+
+        squares = [x ** 2 for x in range(start, end + 1)]
+        return squares
+
+    def calculate_square_roots(self, numbers):
+
+        square_roots = [math.sqrt(num) for num in numbers]
+        return square_roots
+
+
+square_gen = SquareGenerator()
+
+try:
+
+    squares_invalid_range = square_gen.generate_squares(10, 5)
+except ValueError as e:
+    print("Error:", e)
+else:
+
+    squares_1_to_10 = square_gen.generate_squares(1, 10)
+
+    square_roots_1_to_10 = square_gen.calculate_square_roots(squares_1_to_10)
+
+    print("List of squares from 1 to 10:")
+    print(squares_1_to_10)
+
+    print("\nSquare roots of numbers in the list:")
+    print(square_roots_1_to_10)
+
+
+
+
+
+
 
