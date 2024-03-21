@@ -134,6 +134,40 @@ class SquareGenerator:
         square_roots = [math.sqrt(num) for num in numbers]
         return square_roots
 
+    #TASK7
+
+    import math
+
+    class SquareGenerator:
+        def generate_squares(self, start, end):
+
+            if end < start:
+                raise ValueError("End of range must be greater than or equal to start.")
+
+            squares = [x ** 2 for x in range(start, end + 1)]
+            return squares
+
+        def calculate_square_roots(self, numbers):
+
+            square_roots = [math.sqrt(num) for num in numbers]
+            return square_roots
+
+        from square_package.square_generator import SquareGenerator
+
+        square_gen = SquareGenerator()
+
+        squares_1_to_10 = square_gen.generate_squares(1, 10)
+
+        square_roots_1_to_10 = square_gen.calculate_square_roots(squares_1_to_10)
+
+        print("List of squares from 1 to 10:")
+        print(squares_1_to_10)
+
+        print("\nSquare roots of numbers in the list:")
+        print(square_roots_1_to_10)
+
+
+
 
 
 
