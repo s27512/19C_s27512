@@ -43,3 +43,36 @@ print("\nList of squares from 5 to 15:")
 print(squares_5_to_15)
 
 
+
+
+#TASK4
+
+import math
+
+class SquareGenerator:
+    def generate_squares(self, start, end):
+
+        squares = [x**2 for x in range(start, end + 1)]
+        return squares
+
+    def calculate_square_roots(self, numbers):
+
+        square_roots = [math.sqrt(num) for num in numbers]
+        return square_roots
+
+square_gen = SquareGenerator()
+
+squares_1_to_10 = square_gen.generate_squares(1, 10)
+
+square_roots_1_to_10 = square_gen.calculate_square_roots(squares_1_to_10)
+
+print("List of squares from 1 to 10:")
+print(squares_1_to_10)
+
+print("\nSquare roots of numbers in the list:")
+print(square_roots_1_to_10)
+
+
+
+
+
