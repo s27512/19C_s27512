@@ -22,3 +22,24 @@ print("\nList of squares from 5 to 15:")
 print(squares_5_to_15)
 
 
+#TASK3
+
+class SquareGenerator:
+    def generate_squares(self, start, end):
+
+        squares = [x**2 for x in range(start, end + 1)]
+        return squares
+
+square_gen = SquareGenerator()
+
+squares_1_to_10 = square_gen.generate_squares(1, 10)
+
+squares_5_to_15 = square_gen.generate_squares(5, 15)
+
+print("List of squares from 1 to 10:")
+print(squares_1_to_10)
+
+print("\nList of squares from 5 to 15:")
+print(squares_5_to_15)
+
+
